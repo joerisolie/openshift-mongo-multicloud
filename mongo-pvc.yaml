@@ -1,0 +1,38 @@
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: mongo-persistent-storage-1
+  annotations:
+    volume.beta.kubernetes.io/storage-class: ceph
+spec:
+  accessModes:     
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
+---
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: mongo-persistent-storage-2
+  annotations:
+    volume.beta.kubernetes.io/storage-class: ceph
+spec:
+  accessModes:     
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
+---
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: mongo-persistent-storage-3
+  annotations:
+    volume.beta.kubernetes.io/storage-class: ceph
+spec:
+  accessModes:     
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
